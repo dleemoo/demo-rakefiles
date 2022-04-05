@@ -2,12 +2,10 @@
 
 desc "TASK A"
 task :a do
-  def other_method
-    "other method (a)"
-  end
+  local = -> { "other method (a)" }
 
   puts a
-  puts other_method
+  puts local.call
 end
 
 def a
